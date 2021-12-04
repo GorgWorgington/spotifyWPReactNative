@@ -5302,7 +5302,7 @@
     "jscodeshift" "^0.11.0"
     "nullthrows" "^1.1.1"
 
-"react-native-webview@^11.15.0":
+"react-native-webview@11.15.0":
   "integrity" "sha512-0Wv+8qu8XuACx1xZwzc2Yfl+rOvxUouLcPxUKdkhaMVNpwoM5/ePpczCQZ3LpiRnSoEtjaUkfyQHbJQ+x4dDJQ=="
   "resolved" "https://registry.npmjs.org/react-native-webview/-/react-native-webview-11.15.0.tgz"
   "version" "11.15.0"
