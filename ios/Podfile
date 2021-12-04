@@ -12,6 +12,8 @@ target 'spotifyReactNative' do
     :hermes_enabled => false
   )
 
+  pod 'RNEventEmitter', :path => '../node_modules/react-native-events'
+
   target 'spotifyReactNativeTests' do
     inherit! :complete
     # Pods for testing
