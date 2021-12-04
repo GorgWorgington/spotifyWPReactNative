@@ -26,44 +26,27 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import SpotifyWebView from './Components/SpotifyWebView';
+import {
+    auth,
+    remote,
+    ApiConfig,
+    ApiScope,
+    SpotifyRemoteApi,
+    PlayerState,
+    PlayerContext,
+    RepeatMode,
+    ContentItem,
+    SpotifyAuth
+} from 'react-native-spotify-remote';
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import SpotifyPlayer from './Components/SpotifyPlayer';
+
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SpotifyWebView />
+    <SpotifyPlayer />
   );
 };
 
