@@ -16,7 +16,8 @@ const SpotifyWebView = () => {
 	return (
 		<View style={{ flex: 1 }}>
 			<WebView  originWhitelist={['*']}
-                source={{ uri: "https://bitmovin.com/demos/drm" }}
+                // source={{ uri: "https://bitmovin.com/demos/drm" }}
+				source={{ uri: "file:///android_asset/SpotifyWebView.html"}}
                 javaScriptEnabled={true}
                 mixedContentMode='always'
                 allowFileAccess={true}
