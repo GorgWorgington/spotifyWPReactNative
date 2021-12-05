@@ -1,7 +1,7 @@
 package com.spotifyreactnative;
 
-import com.reactlibrary.RNSpotifyRemotePackage;
-import com.lufinkey.react.eventemitter.RNEventEmitterPackage;
+// import com.reactlibrary.RNSpotifyRemotePackage;
+// import com.lufinkey.react.eventemitter.RNEventEmitterPackage;
 
 import android.app.Application;
 import android.content.Context;
@@ -29,8 +29,8 @@ public class MainApplication extends Application implements ReactApplication {
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
-			packages.add(new RNEventEmitterPackage());
-			packages.add(new RNSpotifyRemotePackage());
+			// packages.add(new RNEventEmitterPackage());
+			// packages.add(new RNSpotifyRemotePackage());
           return packages;
         }
 

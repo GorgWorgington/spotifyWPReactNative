@@ -1,4 +1,5 @@
 // @flex
+import React from 'react';
 
 import {
   Button,
@@ -27,11 +28,24 @@ import {
 } from 'react-native-spotify-remote';
 
 const SpotifyPlayer = () => {
-
-
   return (
     <View style={styles.spotifyPlayer}>
+		{/* container for control buttons */}
+		<View style={{ flexDirection: 'row' }}> 
+			<Button style={styles.playerButton}
+				title="<<"
+				color='#3DC063'
+			/>
+			<Button style={styles.playerButton}
+				title="Pause"
+				color='#3DC063'
+			/>
+			<Button style={styles.playerButton}
+				title=">>"
+				color='#3DC063'
+			/>
 
+		</View>
     </View>
   )
 }
@@ -41,7 +55,17 @@ const styles = StyleSheet.create({
   spotifyPlayer: {
     marginTop: 32,
     paddingHorizontal: 24,
-    backgroundColor: Colors.darker,
-    flex: 1
+    backgroundColor: '#292929',
+	color: '#fff',
+	height: 400,
+    // flex: 1
   },
+  playerButton: {
+	  backgroundColor: '#3DC063',
+	  margin: 10,
+	  flex: 1,
+  },
+
 });
+
+export default SpotifyPlayer;

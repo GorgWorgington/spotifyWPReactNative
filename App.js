@@ -41,12 +41,34 @@ import {
 
 import SpotifyPlayer from './Components/SpotifyPlayer';
 
+const spotifyConfig = {
+    clientID: "9968bd20805046b28015e835cda19261",
+    redirectURL: "spotifyreactnative://spotify-player",
+    scope: ApiScope.AppRemoteControlScope | ApiScope.UserFollowReadScope
+}
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  console.log("entering App()");
+  // const token = ""
+  const token = auth.authorize(spotifyConfig)
+  // .catch(() => {
+  //   console.log("failed to authorize");
+  // })
+  ;
+
+  remote.connect(token).then(() => {
+    console.log("connected");
+  }).catch(() => {
+    console.log("failed to connect");
+  });
+  remote.playUri("spotify:track:5BYWuQEiyb6bxJGWIvsnpF").catch(() => {
+    console.log("failed to play uri");
+  });
 
   return (
-    <SpotifyPlayer />
+	  <View style={{flex: 1}}>
+      <SpotifyPlayer />
+    </View>
   );
 };
 
